@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/streak_apollo.mk
+    $(LOCAL_DIR)/dot_apollo.mk
 
 COMMON_LUNCH_CHOICES := \
-    streak_apollo-user \
-    streak_apollo-userdebug \
-    streak_apollo-eng
+    dot_apollo-user \
+    dot_apollo-userdebug \
+    dot_apollo-eng
