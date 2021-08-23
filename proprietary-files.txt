@@ -640,12 +640,12 @@ vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
-# Embedded Secure Element power manager
-vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
-vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
-vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
-vendor/lib64/vendor.qti.esepowermanager@1.0.so
-vendor/lib64/vendor.qti.esepowermanager@1.1.so
+# Embedded Secure Element power manager - from lmi-user 11 RKQ1.200826.002 V12.2.6.0.RJKMIXM release-keys
+vendor/bin/hw/vendor.qti.esepowermanager@1.1-service|3e9c23f5f7b0ae7a1618ae656b2e6ed3035db2e0
+vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc|3c024c7135ec3dd8658624509ee61396a74f1ede
+vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so|ff33f8e743dba93ca6f5ccb2d3299840d6cad057
+vendor/lib64/vendor.qti.esepowermanager@1.0.so|63bdca6892d06b032c1ac43f510c9626adf3dbce
+vendor/lib64/vendor.qti.esepowermanager@1.1.so|a9a95bb466b8cd48c368080b03a19296af3cf1b6
 
 # Feature enabler client
 vendor/bin/feature_enabler_client
