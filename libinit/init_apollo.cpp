@@ -91,4 +91,7 @@ void vendor_load_properties() {
             set_device_props("Xiaomi", "Mi 10T", "apollo", "M2007J3SY");
         }
     }
+
+    property_override("ro.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
+    property_override("ro.build.description", "apollo-user 11 RKQ1.200826.002 V12.5.2.0.RJDMIXM release-keys");
 }
