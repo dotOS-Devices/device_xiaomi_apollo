@@ -62,14 +62,15 @@ void set_ro_build_prop(const string &source, const string &prop,
     property_override(prop_name.c_str(), value.c_str(), true);
 }
 
-void set_device_props(const string brand, const string device,
-			const string model) {
+void set_device_props(const string brand, const string marketname,
+            const string device, const string model) {
     // list of partitions to override props
     string source_partitions[] = { "", "bootimage", "odm.", "product.",
                                    "system", "system_ext.", "vendor." };
 
     for (const string &source : source_partitions) {
         set_ro_build_prop(source, "brand", brand, true);
+        set_ro_build_prop(source, "marketname", marketname, true);
         set_ro_build_prop(source, "device", device, true);
         set_ro_build_prop(source, "product", device, false);
         set_ro_build_prop(source, "model", model, true);
@@ -82,12 +83,12 @@ void vendor_load_properties() {
     string sku = GetProperty("ro.boot.product.hardware.sku", "");
 
     if (hwc == "CN") { // K30S Ultra (China)
-            set_device_props("Xiaomi", "apollo", "M2007J3SC");
+            set_device_props("Xiaomi", "K30S Ultra", "apollo", "M2007J3SC");
     } else {
         if (sku == "pro") { // Mi 10T Pro
-            set_device_props("Xiaomi", "apollo", "M2007J3SG");
+            set_device_props("Xiaomi", "Mi 10T Pro", "apollo", "M2007J3SG");
         } else { // Mi 10T
-            set_device_props("Xiaomi", "apollo", "M2007J3SY");
+            set_device_props("Xiaomi", "Mi 10T", "apollo", "M2007J3SY");
         }
     }
 }
