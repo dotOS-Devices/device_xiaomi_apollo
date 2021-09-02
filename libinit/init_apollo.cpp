@@ -78,11 +78,16 @@ void set_device_props(const string brand, const string device,
 
 
 void vendor_load_properties() {
+    string hwc = GetProperty("ro.boot.hwc", "");
     string sku = GetProperty("ro.boot.product.hardware.sku", "");
 
-    if (sku == "pro") { // Mi 10T Pro
-        set_device_props("Xiaomi", "apollo", "M2007J3SG");
-    } else { // Mi 10T
-        set_device_props("Xiaomi", "apollo", "M2007J3SY");
+    if (hwc == "CN") { // K30S Ultra (China)
+            set_device_props("Xiaomi", "apollo", "M2007J3SC");
+    } else {
+        if (sku == "pro") { // Mi 10T Pro
+            set_device_props("Xiaomi", "apollo", "M2007J3SG");
+        } else { // Mi 10T
+            set_device_props("Xiaomi", "apollo", "M2007J3SY");
+        }
     }
 }
