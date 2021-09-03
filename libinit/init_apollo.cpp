@@ -94,4 +94,7 @@ void vendor_load_properties() {
 
     property_override("ro.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
     property_override("ro.build.description", "apollo-user 11 RKQ1.200826.002 V12.5.2.0.RJDMIXM release-keys");
+
+    // Safetyet Workaround
+    property_override("ro.boot.verifiedbootstate", "green");
 }
