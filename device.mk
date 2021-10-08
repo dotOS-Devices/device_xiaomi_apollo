@@ -256,6 +256,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.xiaomi_kona
 
+# Logs
+PRODUCT_PACKAGES += \
+    init.logcat.rc
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
@@ -424,6 +428,14 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc
+
+# USB debugging
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp,adb \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.debuggable=1 \
+    ro.control_privapp_permissions=log
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
