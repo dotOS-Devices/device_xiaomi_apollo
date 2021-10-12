@@ -7,6 +7,7 @@
 DEVICE_PATH := device/xiaomi/apollo
 
 BUILD_BROKEN_DUP_RULES := true
+RELAX_USES_LIBRARY_CHECK := true
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
