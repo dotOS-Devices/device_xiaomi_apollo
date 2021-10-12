@@ -385,11 +385,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.qcom.power.rc \
     init.qcom.rc \
-    init.recovery.qcom.rc \
     init.target.rc \
     fstab.qcom \
     fstab.qcom_ramdisk \
     ueventd.qcom.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc
 
 # Secure element
 PRODUCT_PACKAGES += \
