@@ -907,9 +907,12 @@ vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
 # NFC
-vendor/etc/libnfc-nxp.conf
-vendor/etc/libnfc-nxp_RF.conf
-vendor/lib/libsn100u_fw.so
+vendor/etc/libnfc-nxp.conf|a11024d2ba91af4ede5b665725b8f1e8b33bf108
+vendor/etc/libnfc-nxp_RF.conf|dc9d9e7cb16ba04da58e96f40f187fa79ef53756
+vendor/lib/libsn100u_fw.so|127d8580e89f9b6170abf7625c6e0d5433227aff
+vendor/lib64/jcos_nq_client.so|f8c6c6ceaefe2125dca1c3b05a094fe2c9066723
+vendor/lib64/ls_nq_client.so|52172e3dc8611f1153286e0fc9ee9ed720af55a0
+vendor/lib64/se_nq_extn_client.so|e29ef392ba66cc28e9ee6c67233201f32a827cfa
 
 # NVRAM
 vendor/bin/nv_mac
